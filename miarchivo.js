@@ -20,8 +20,8 @@ if (descuento.toLowerCase() == "si" || descuento.toLowerCase() == "s"){
     while(!parseInt(valorDescuento) || parseInt(valorDescuento) > 100 || parseInt(valorDescuento) < 1){
         valorDescuento = prompt("Escriba de cuanto es el descuento que posee. Escribir número sin texto.");
     };
-    precioConDescuento(cantidad, valorDescuento);
+    precioConDescuento(parseInt(cantidad), parseInt(valorDescuento));
 }else{
-    precioSinDescuento(cantidad);
+    precioSinDescuento(parseInt(cantidad));
 };
 

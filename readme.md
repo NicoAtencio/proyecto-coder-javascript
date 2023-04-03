@@ -4,7 +4,7 @@ Proyecto curso de JavaScript.
 
 ## Authors
 
-- Hector Nicolas Atencio (alumno Coderhouse)
+- Héctor Nicolás Atencio (alumno Coderhouse)
 
 ## USed By
 
