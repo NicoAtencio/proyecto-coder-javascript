@@ -4,8 +4,54 @@
 }
 
 body{
-    background: #232020;
+    background: linear-gradient(#999, #232020);
 }
+
+
+/*Barra de navegacion.  */
+a{
+    color: #222;
+    text-decoration: none;
+    font-size: 20x;
+}
+
+i{
+    color: #fff;
+}
+
+input{
+    border: none;
+}
+
+.contenedor-barra{
+    background: #aaa;
+    padding: 10px;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navegacion__lupa{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.navegacion__inicio{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.navegacion__carro{
+    cursor: pointer;
+}
+
+
+/* Cuerpo del contenedor de camisetas. */
+
+
 
 .contenedor-categorias{
     /* background: red; */
@@ -44,10 +90,13 @@ body{
     align-items: center;
     background: #fff;
     /* justify-content: space-evenly; */
+    transition: transform 0.5s;
 }
 
 .contenedor-categorias__items:hover{
     box-shadow: 0 0 10px 5px #aaa;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -87,4 +136,8 @@ body{
     background: #333;
     color: #fff;
     cursor: pointer;
+}
+
+
+@media screen and (max-width: 425px){
 }
