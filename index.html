@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camisetas.</title>
-    <link rel="stylesheet" href="./estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <script src="https://kit.fontawesome.com/4f2d52165e.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./icono.ico">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <nav class="contenedor-barra">
             <ul class="navegacion">
                 <li><i class="fa-solid fa-house navegacion__inicio"></i><a href="#">Inicio</a></li>
-                <li><input type="text" placeholder="Buscar equipo"><i class="fa-solid fa-magnifying-glass navegacion__lupa"></i></li>
+                <li><input type="text" placeholder="Buscar equipo" value ="" class="buscar"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa" ></i></li>
                 <li><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></li>
             </ul>
         </nav>
@@ -28,28 +29,28 @@
                     <div class="contenedor-categorias__items-logo espanola">
                         <img src="./iconos-ligas/LaLiga_Santander.png" alt="Foto liga española">
                     </div>
-                    <button>Visitar liga</button>
+                    <button id="liga_espanola">Visitar liga</button>
                 </div>
 
                 <div class="contenedor-categorias__items">
                     <div class="contenedor-categorias__items-logo alemana">
                         <img src="./iconos-ligas/alemana.png" alt="Foto liga alemana">
                     </div>
-                    <button>Visitar liga</button>
+                    <button id="liga_alemana">Visitar liga</button>
                 </div>
 
                 <div class="contenedor-categorias__items">
                     <div class="contenedor-categorias__items-logo inglesa">
                         <img src="./iconos-ligas/Premier_League.png" alt="Foto liga inglesa">
                     </div>
-                    <button>Visitar liga</button>
+                    <button id="liga_inglesa">Visitar liga</button>
                 </div>
 
                 <div class="contenedor-categorias__items">
                     <div class="contenedor-categorias__items-logo italiana">
                         <img src="./iconos-ligas/italiana.png" alt="Foto liga italiana">
                     </div>
-                    <button>Visitar liga</button>
+                    <button id="liga_italiana">Visitar liga</button>
                 </div>
 
             </div>
@@ -59,14 +60,14 @@
                     <div class="contenedor-categorias__items-logo francesa">
                         <img src="./iconos-ligas/francesa.png" alt="Foto liga francesa">
                     </div>
-                    <button>Visitar liga</button>
+                    <button id="liga_francesa">Visitar liga</button>
                 </div>
 
                 <div class="contenedor-categorias__items contenedor-abajo">
                     <div class="contenedor-categorias__items-logo argentina">
                         <img src="./iconos-ligas/argentina.png" alt="Foto liga argentina">
                     </div>
-                    <button>Visitar liga</button>
+                    <button class="contenedor-categorias__item-argentina">Visitar liga</button>
                 </div>
 
                 <div class="contenedor-categorias__items contenedor-abajo">
@@ -75,7 +76,7 @@
                             <img src="./iconos-ligas/botines.png" alt="Foto botines">
                         </div>
                     </div>
-                    <button>Visitar botines</button>
+                    <button id="liga_botines">Visitar botines</button>
                 </div>
 
                 <div class="contenedor-categorias__items contenedor-abajo">
@@ -84,19 +85,30 @@
                             <img src="./iconos-ligas/accesorios.png" alt="Foto accesorios">
                         </div>
                     </div>
-                    <button>Visitar accesorios</button>
+                    <button id="liga_accesorio">Visitar accesorios</button>
                 </div>
                 
             </div>
         </section>
     </article>
     <aside>
-        <!-- Sera el carro de compras. -->
+        <div class="carro__secciones">
+            <div class="carro__secciones-items">Producto</div>
+            <div class="carro__secciones-items">Precio</div>
+            <div class="carro__secciones-items">Cantidad</div>
+        </div>
     </aside>
+    <div class="contenedor__comprar">
+        <button class="boton__comprar">Comprar</button>
+    </div>
     <footer>
         <!-- Descripcion de quienes somos -->
     </footer>
-    <script src="./miarchivo.js"></script>
+    <script src="./seleccion_de_botones/navegar.js"></script>
+    <script src="./clases_y_objetos/clases.js"></script>
+    <script src="./clases_y_objetos/objetos.js"></script>
+    <script src="./clases_y_objetos/funciones.js"></script>
+    <script src="./seleccion_de_botones/busqueda-producto.js"></script>
 </body>
 
 </html>

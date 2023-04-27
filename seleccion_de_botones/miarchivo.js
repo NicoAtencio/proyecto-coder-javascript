@@ -94,5 +94,10 @@ while(buscar.toLowerCase() == "si" || buscar.toLowerCase() == "s"){
     buscar= prompt("¿Desea buscar otro accesorio?");
 };
 
+// Botones
+let viajar = document.querySelector(".contenedor-categorias__item-argentina");
+viajar.addEventListener('click', () => {
+    window.location.href = "./ligas/argentina/argentina.html"
+});
 
 

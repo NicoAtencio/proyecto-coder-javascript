@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --color-fondo-nav: rgb(187, 8, 184);
+    --primer-color-gradient: #dbe4b2;
+    --segundo-color-gradient: #dbe4b2;
+    --sombra: #b5a6a6;
+    --bordes-item: #777171;
+    --color-carro: #eee;
+    --color-boton-al-comprar : rgb(61, 53, 53);
+}
+
+body{
+    background: linear-gradient(var(--primer-color-gradient), var(--segundo-color-gradient));
+    user-select: none;
+}
+
+/*Barra de navegacion.  */
+.inicio{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: -3px;
+}
+
+i{
+    color: #fff;
+}
+
+input{
+    border: none;
+    height: 20px;
+}
+
+.contenedor-barra{
+    background: var(--color-fondo-nav);
+    padding: 10px;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navegacion__lupa{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.navegacion__inicio{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.navegacion__carro{
+    cursor: pointer;
+}
+
+/* Contenedor camisetas */
+
+article{
+    padding: 5vw;
+}
+.contenedor{
+    margin: 0 auto;
+    /* background: red; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.contenedor__imagen{
+    width: 100%;
+    height: 70%;
+    /* background: #0ff; */
+}
+
+.contenedor__imagen-imagen{
+    width: 100%;
+    height: 100%;
+    /* background: #ff0; */
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.contenedor__item{
+    border: 1px solid var(--bordes-item);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    transition: box-shadow 0.2s, transform 0.3s;
+    border-radius: 10%;
+}
+
+.contenedor__item:hover{
+    box-shadow: 0 0 5px 5px var(--sombra);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+.contenedor__item-botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+}
+
+.contenedor__item-botones button{
+    width: 80%;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.contenedor__item-botones button:hover{
+    cursor: pointer;
+    background: var(--color-fondo-nav);
+    color: #000;
+}
+
+.contenedor__item-botones button:active{
+    background: #fff;
+    color: #000;
+}
+
+
+/* Carro de compras*/
+aside{
+    padding: 10px 5vw;
+}
+.carro__secciones{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-row: 20px;
+    grid-auto-rows: 20px;
+    background: var(--color-carro);
+}
+
+.carro__secciones-items{
+    border: 1px solid #000;
+}
+
+.contenedor__comprar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton__comprar{
+    margin-top: 5px;
+    width: 20%;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.boton__comprar:hover{
+    cursor: pointer;
+}
+
+.boton__comprar:active{
+    background: var(--color-boton-al-comprar);
+    color: #fff;
+}
+
+@media screen and (min-width: 388px){
+    .contenedor{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .contenedor__item-botones button{
+        width: 60%;
+    }
+}
+
+@media  screen and (min-width: 708px) {
+    .contenedor{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    /* .carro{
+        margin: 10px auto;
+        width: 90%;
+        background: #0ff;
+        display: flex;
+        flex-direction: column;
+    } */
+    .carro__secciones{
+        display: grid;
+        grid-template-columns: 60% 20% 20%;
+        grid-template-rows: 40px;
+        grid-auto-rows: 40px;
+    }
+    .carro__secciones-items{
+        border: 2px solid #000;
+    }
+
+    .contenerdor__comprar{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .boton__comprar{
+        width: 100px;
+        height: 30px;
+        
+    }
+
+}

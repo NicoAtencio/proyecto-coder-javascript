@@ -9,10 +9,17 @@ body{
 
 
 /*Barra de navegacion.  */
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 a{
     color: #222;
     text-decoration: none;
-    font-size: 20x;
+    font-size: 20px;
+    align-self: flex-start;
 }
 
 i{
@@ -47,6 +54,7 @@ input{
 .navegacion__carro{
     cursor: pointer;
 }
+
 
 
 /* Cuerpo del contenedor de camisetas. */
@@ -132,10 +140,43 @@ input{
     background: #999;
 }
 
+.boton{
+    width: 100%;
+    margin: 0 auto;
+    background: red;
+}
+
 .contenedor-categorias__items button:hover{
     background: #333;
     color: #fff;
     cursor: pointer;
+}
+
+/* carro */
+aside{
+    padding: 10px 5vw;
+}
+.carro__secciones{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-row: 20px;
+    grid-auto-rows: 20px;
+}
+
+.carro__secciones-items{
+    border: 1px solid #000;
+}
+
+.contenedor__comprar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton__comprar{
+    margin-top: 5px;
+    width: 20%;
+    margin-bottom: 10px;
 }
 
 
