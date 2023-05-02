@@ -15,16 +15,20 @@
     <header>
         <nav class="contenedor-barra">
             <ul class="navegacion">
-                <li class="inicio"><i class="fa-solid fa-house navegacion__inicio"></i><a
-                        href="../index.html">Inicio</a></li>
-                <li><input type="text" placeholder="Buscar equipo" class="buscar"><i
-                        class="fa-solid fa-magnifying-glass navegacion__lupa lupa"></i></li>
+                <li class="inicio">
+                    <i class="fa-solid fa-house navegacion__inicio"></i>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="inicio">
+                    <input type="text" placeholder="Buscar equipo" class="buscar">
+                    <a href="#lupa"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa"></i></a>
+                </li>
                 <li><a href="#carro"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></a></li>
             </ul>
         </nav>
     </header>
 
-    <article>
+    <article class="Liga_Francesa">
         <section class="contenedor">
 
             <div class="contenedor__item">
@@ -35,7 +39,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="lens">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -47,7 +50,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="lorient">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -59,7 +61,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="psg">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -71,7 +72,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="lyon">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -83,7 +83,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="marsella">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -95,7 +94,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="monaco">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -107,7 +105,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="nantes">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -119,7 +116,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="nice">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
 
@@ -132,15 +128,15 @@
             <div class="carro__secciones-items">Precio</div>
             <div class="carro__secciones-items">Cantidad</div>
         </div>
+        <div class="contenedor__comprar">
+            <button class="boton__comprar">Comprar</button>
+        </div>
     </aside>
-    <div class="contenedor__comprar">
-        <button class="boton__comprar">Comprar</button>
-    </div>
 
     <script src="../clases_y_objetos/clases.js"></script>
     <script src="../clases_y_objetos/objetos.js"></script>
     <script src="../clases_y_objetos/funciones.js"></script>
-    <script src="../seleccion_de_botones/selec-bot-francesa.js"></script>
+    <script src="../seleccion_de_botones/selec-botones.js"></script>
     <script src="../seleccion_de_botones/busqueda-producto.js"></script>
 
 </body>

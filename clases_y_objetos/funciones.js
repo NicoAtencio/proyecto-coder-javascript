@@ -1,5 +1,5 @@
-// Donde se guarda todo los productos seleccionados por el usuario.
-const carro = [];
+// Donde se guarda y recupera todos los productos seleccionados por el usuario.
+const carro = JSON.parse(localStorage.getItem("datos")) || [];
 
 
 // Agregar al local store y al arreglo carro los productos seleccionados por el cliente.  
@@ -38,16 +38,11 @@ const agregarCarroSiNoEsta = (e) => {
         }
     }
 }
-// Agrega al arreglo carro un objeto que no se encuentre en el arreglo.
+// Agrega al arreglo carro un objeto que no se encuentre en el arreglo carro.
 
 
-if (localStorage["datos"]) {
-    let productosEnStore = JSON.parse(localStorage.getItem("datos"));
-    for (let valores of productosEnStore) {
-        carro.push(valores)
-    }
-}
-// Agregar todo lo que este en el local store al arreglo carro
+
+
 
 
 const borrarLoPintado = () => {
@@ -65,6 +60,9 @@ const pintarCarro = () => {
             if (agre == "id") {
                 continue;
             }
+            if (agre == "seccion") {
+                continue;
+            }
             let carro = document.querySelector(".carro__secciones");
             let div = document.createElement("div");
             div.classList.add("carro__secciones-items", "agregado");
@@ -76,23 +74,59 @@ const pintarCarro = () => {
 // Pinta el carro
 pintarCarro();
 
+// Comprar
+let camisetasPorCantidad;
+
 let pagar = document.querySelector(".boton__comprar");
 pagar.addEventListener("click", () => {
+    camisetasPorCantidad = carro.map(pre => pre.precio * pre.cantidad);
+    let total = camisetasPorCantidad.reduce((acumulador, elemento) => acumulador + elemento, 0);
+    if(document.querySelector(".total")){
+        let borrar = document.querySelector(".total");
+        borrar.remove();
+    }
+    let mostrarTotal = document.createElement("h2");
+    mostrarTotal.innerText = `El total a pagar es $${total}`;
+    mostrarTotal.classList.add("total");
+    let primerHijoTotal = document.querySelector("body");
+    let segundoHijo = primerHijoTotal.childNodes[2]
+    primerHijoTotal.insertBefore(mostrarTotal, segundoHijo);
     borrarLoPintado();
     localStorage.clear();
+    for(let masDeCero of listaProductos){
+        if(masDeCero.cantidad > 0){
+            masDeCero.cantidad = 0;
+        }
+    }
+    // Lo que hace es hacer que los productos seleccionados vuelvan a cantidad cero. 
     carro.splice(0, carro.length);
-    alert("Muchas gracias por su compra");
 });
 // Vaciar el carro y el arreglo carro al pagar.
 
 
 // Funcion para buscar producto
+let encontrados;
+
 const existeProducto = () => {
     let valorInput = buscar.value.toLowerCase()
-    let encontrados = listaProductos.filter((i) => i.nombre.toLowerCase().includes(valorInput));
+    encontrados = listaProductos.filter((i) => i.nombre.toLowerCase().includes(valorInput));
     buscar.value = "";
     if (encontrados.length > 0) {
         sessionStorage.setItem("buscado", JSON.stringify(encontrados));
-        console.log(encontrados)
+        window.location.href = "../html/busqueda.html"
+    } else {
+        if(document.querySelector(".noExiste")){
+            let borrar = document.querySelector(".noExiste");
+            borrar.remove();
+
+        }
+        let noExiste = document.createElement("h2");
+        noExiste.innerText = `No existe el producto ${valorInput}`
+        noExiste.classList.add("noExiste")
+        let primerHijoSinProducto = document.querySelector("body");
+        let segundoHijo = primerHijoSinProducto.childNodes[2]
+        primerHijoSinProducto.insertBefore(noExiste, segundoHijo);
     };
 }
+// Al hacer enter sobre al input o click en la  lupa si no se a escrito nada salen todo los productos para comprobar que todos pueden ser encontrados.
+

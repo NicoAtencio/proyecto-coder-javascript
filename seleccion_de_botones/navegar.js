@@ -1,4 +1,4 @@
-const irArgentina = document.querySelector(".contenedor-categorias__item-argentina");
+const irArgentina = document.getElementById("liga_argentina");
 irArgentina.addEventListener('click', () => {
     window.location.href = "../html/argentina.html";
 });
@@ -37,20 +37,6 @@ const irAccesorios = document.getElementById("liga_accesorio");
 irAccesorios.addEventListener("click", () => {
     window.location.href =  "../html/accesorios.html";
 });
-
-// Seleccion para buscar un producto
-
-// let frase = ""
-// buscar.addEventListener("keydown", (e) =>{
-//     if ((e.keyCode >= 65 && e.keyCode <= 90) || e.keyCode === 32) {
-//         frase += e.key
-//         console.log(frase);
-//       }
-//     if(e.keyCode == 8){
-//         frase = frase.slice(0, -1);
-//         console.log(frase);
-//     }
-// });
 
 
 

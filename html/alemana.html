@@ -8,7 +8,7 @@
     <title>Alemana</title>
     <script src="https://kit.fontawesome.com/4f2d52165e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/alemana_estilo.css">
-    <link rel="icon" href="./argentina.ico">
+    <link rel="icon" href="./alemana.ico">
 </head>
 
 <body>
@@ -16,13 +16,16 @@
         <nav class="contenedor-barra">
             <ul class="navegacion">
                 <li class="inicio"><i class="fa-solid fa-house navegacion__inicio"></i><a href="../index.html">Inicio</a></li>
-                <li><input type="text" placeholder="Buscar equipo" class="buscar"><i
-                        class="fa-solid fa-magnifying-glass navegacion__lupa lupa" ></i></li>
+                <li class="inicio">
+                    <input type="text" placeholder="Buscar equipo" class="buscar">
+                    <a href="#lupa"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa" ></i></a>
+                </li>
                 <li><a href="#carro"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></a></li>
             </ul>
         </nav>
     </header>
-    <article>
+    
+    <article class="Liga_Alemana">
         <section class="contenedor">
             <div class="contenedor__item">
                 <div class="contenedor__imagen">
@@ -32,7 +35,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="bayern_munich">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -43,7 +45,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="borussia">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -54,7 +55,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="hoffenheim">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -65,7 +65,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="leipzig">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -76,7 +75,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="leverkusen">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -87,7 +85,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="monchengladbach">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -98,7 +95,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="schalke">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
             <div class="contenedor__item">
@@ -109,7 +105,6 @@
                 </div>
                 <div class="contenedor__item-botones">
                     <button class="contenedor__boton-carro" id="wolfsburg">Añadir al carro</button>
-                    <button class="contenedor__boton-informacion">Ver producto</button>
                 </div>
             </div>
         </section>
@@ -120,17 +115,15 @@
             <div class="carro__secciones-items">Precio</div>
             <div class="carro__secciones-items">Cantidad</div>
         </div>
+        <div class="contenedor__comprar">
+            <button class="boton__comprar">Comprar</button>
+        </div>
     </aside>
-    <div class="contenedor__comprar">
-        <button class="boton__comprar">Comprar</button>
-    </div>
-    <footer>
-
-    </footer>
+    
     <script src="../clases_y_objetos/clases.js"></script>
     <script src="../clases_y_objetos/objetos.js"></script>
     <script  src="../clases_y_objetos/funciones.js"></script>
-    <script src="../seleccion_de_botones/selec-bot-alemana.js"></script>
+    <script src="../seleccion_de_botones/selec-botones.js"></script>
     <script src="../seleccion_de_botones/busqueda-producto.js"></script>
 </body>
 

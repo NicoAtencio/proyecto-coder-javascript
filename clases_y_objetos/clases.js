@@ -1,11 +1,12 @@
 class Productos {
-    constructor(id, nombre, precio, cantidad=0){
+    constructor(id, nombre, precio, seccion, cantidad = 0) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
+        this.seccion = seccion;
         this.cantidad = cantidad
     };
-    agregarAlCarro(){
+    agregarAlCarro() {
         this.cantidad++;
     };
 };
