@@ -8,7 +8,8 @@
     <title>Italiana</title>
     <script src="https://kit.fontawesome.com/4f2d52165e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/italiana.css">
-    <link rel="icon" href="./argentina.ico">
+    <link rel="icon" href="./italiana.ico">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                     <input type="text" placeholder="Buscar equipo" class="buscar">
                     <a href="#lupa"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa"></i></a>
                 </li>
-                <li><a href="#carro"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></a></li>
+                <li id="compra"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></li>
             </ul>
         </nav>
     </header>
@@ -124,19 +125,22 @@
 
     <aside class="carro" id="carro">
         <div class="carro__secciones">
-            <div class="carro__secciones-items">Producto</div>
-            <div class="carro__secciones-items">Precio</div>
-            <div class="carro__secciones-items">Cantidad</div>
+
         </div>
         <div class="contenedor__comprar">
             <button class="boton__comprar">Comprar</button>
         </div>
     </aside>
 
-    <script src="../clases_y_objetos/clases.js"></script>
-    <script src="../clases_y_objetos/objetos.js"></script>
-    <script src="../clases_y_objetos/funciones.js"></script>
-    <script src="../seleccion_de_botones/selec-botones.js"></script>
-    <script src="../seleccion_de_botones/busqueda-producto.js"></script>
+    <script src="../javascript/clases.js"></script>
+    <script src="../javascript/objetos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../javascript/funciones.js"></script>
+    <script src="../javascript/selec-botones.js"></script>
+    <script src="../javascript/busqueda-producto.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="../javascript/mostrar-ocultar-carro.js"></script>
 
 </body>

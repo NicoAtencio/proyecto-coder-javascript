@@ -3,7 +3,7 @@ const lupa = document.querySelector(".lupa");
 
 lupa.addEventListener("click", existeProducto);
 
-buscar.addEventListener("keydown", (e) =>{
+buscar.addEventListener("keyup", (e) =>{
     if(e.key == "Enter"){
         existeProducto();
     };

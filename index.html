@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inglesa</title>
+    <title>Camisetas</title>
     <script src="https://kit.fontawesome.com/4f2d52165e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="icon" href="./argentina.ico">
+    <link rel="icon" href="./icono.ico">
 </head>
 
 <body>
@@ -21,11 +21,11 @@
                     <input type="text" placeholder="Buscar equipo" class="buscar">
                     <a href="#lupa"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa"></i></a>
                 </li>
-                <li><a href="#carro"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></a></li>
+                <li id="compra"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></li>
             </ul>
         </nav>
     </header>
-    
+
     <article>
         <section class="contenedor">
 
@@ -122,19 +122,21 @@
 
     <aside class="carro" id="carro">
         <div class="carro__secciones">
-            <div class="carro__secciones-items">Producto</div>
-            <div class="carro__secciones-items">Precio</div>
-            <div class="carro__secciones-items">Cantidad</div>
         </div>
         <div class="contenedor__comprar" id="lupa">
             <button class="boton__comprar">Comprar</button>
         </div>
     </aside>
-    <script src="./seleccion_de_botones/navegar.js"></script>
-    <script src="./clases_y_objetos/clases.js"></script>
-    <script src="./clases_y_objetos/objetos.js"></script>
-    <script src="./clases_y_objetos/funciones.js"></script>
-    <script src="./seleccion_de_botones/busqueda-producto.js"></script>
+
+    <script src="./javascript/navegar.js"></script>
+    <script src="./javascript/clases.js"></script>
+    <script src="./javascript/objetos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./javascript/funciones.js"></script>
+    <script src="./javascript/busqueda-producto.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./javascript/mostrar-ocultar-carro.js"></script>
 </body>
 
 </html>

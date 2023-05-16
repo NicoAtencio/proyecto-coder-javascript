@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busqueda</title>
+    <title>Document</title>
     <script src="https://kit.fontawesome.com/4f2d52165e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/busqueda.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/pagar.css">
 </head>
 
 <body>
@@ -16,29 +16,31 @@
         <nav class="contenedor-barra">
             <ul class="navegacion">
                 <li class="inicio"><i class="fa-solid fa-house navegacion__inicio"></i><a
-                        href="../index.html">Inicio</a></li>
-                <li class="inicio">
-                    <input type="text" placeholder="Buscar equipo" class="buscar">
-                    <a href="#lupa"><i class="fa-solid fa-magnifying-glass navegacion__lupa lupa"></i></a>
+                        href="../index.html">Inicio</a>
                 </li>
-                <li id="compra"><i class="fa-sharp fa-solid fa-cart-shopping navegacion__carro"></i></li>
             </ul>
         </nav>
     </header>
-
     <article>
-        <section class="contenedor">
-
-
-
-        </section>
+        <div class="titulo">
+            <h2>Muchas gracias por su compra</h2>
+            <p>Por favor ingrese sus datos para continuar con la compra</p>
+        </div>
+        <form class="formulario">
+            <input type="text" placeholder="Ingrese nombre" class="formualario__item" required="">
+            <input type="text" placeholder="Ingrese apellido" class="formualario__item" required="">
+            <input type="number" placeholder="Ingrese DNI" class="formualario__item" required="">
+            <input type="email" placeholder="Ingrese mail" class="formualario__item" required="">
+            <input type="number" step="any" placeholder="Ingresa número de targeta" class="formualario__item" required="">
+            <div class="formulario__total-a-pagar"></div>
+            <input type="submit" class="formualario__item formualario__item-pagar" value="Pagar" id="pagar">
+        </form>
     </article>
-
     <aside class="carro" id="carro">
         <div class="carro__secciones">
 
         </div>
-        <div class="contenedor__comprar" id="lupa">
+        <div class="contenedor__comprar">
             <button class="boton__comprar">Comprar</button>
         </div>
     </aside>
@@ -48,10 +50,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../javascript/funciones.js"></script>
-    <script src="../javascript/creacion_busqueda.js"></script>
-    <script src="../javascript/busqueda-producto.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="../javascript/mostrar-ocultar-carro.js"></script>
-
+    <script src="../javascript/pagar.js"></script>
 </body>
+
+</html>

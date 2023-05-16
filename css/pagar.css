@@ -1,145 +1,123 @@
-*{
+* {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     font-family: sans-serif ;
 }
 
-:root{
-    --color-fondo-nav: rgb(50, 149, 14);
-    --primer-color-gradient: #eaefe9;
-    --segundo-color-gradient: #146a0d;
-    --sombra: #dae9ea;
-    --bordes-item: #454242;
-    --color-carro: #eee;
-    --color-boton-al-comprar : rgb(11, 30, 98);
+:root {
+    --color-fondo-nav: rgb(28, 121, 183);
 }
 
-body{
-    background: linear-gradient(var(--primer-color-gradient), var(--segundo-color-gradient));
-    user-select: none;
-    min-height: 100vh;
+body {
+    background: #ffffff;
 }
+
 
 
 /*Barra de navegacion.  */
-.inicio{
+.inicio {
     display: flex;
     align-items: center;
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     margin-bottom: -3px;
 }
 
-i{
+i {
     color: #fff;
 }
 
-input{
+nav li input {
     border: none;
     height: 20px;
 }
 
-.contenedor-barra{
+.contenedor-barra {
     background: var(--color-fondo-nav);
     padding: 10px;
 }
 
-.navegacion{
+.navegacion {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style-type: none;
 }
 
-.navegacion__lupa{
+.navegacion__lupa {
     margin-left: 5px;
     cursor: pointer;
 }
-.navegacion__inicio{
+
+.navegacion__inicio {
     margin-right: 5px;
     cursor: pointer;
 }
 
-.navegacion__carro{
+.navegacion__carro {
     cursor: pointer;
 }
 
-/* Contenedor camisetas */
-
-article{
-    padding: 5vw;
-}
-.contenedor{
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    row-gap: 20px;
-    column-gap: 20px;
-}
-
-.contenedor__imagen{
-    width: 100%;
-    height: 70%;
-}
-
-.contenedor__imagen-imagen{
-    width: 100%;
-    height: 100%;
-}
-
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-.contenedor__item{
-    border: 1px solid var(--bordes-item);
+/* Titulo */
+.titulo{
     display: flex;
     flex-direction: column;
-    background: #fff;
-    transition: box-shadow 0.2s, transform 0.3s;
-    border-radius: 10%;
-}
-
-.contenedor__item:hover{
-    box-shadow: 0 0 5px 5px var(--sombra);
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-
-
-.contenedor__item-botones{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 30%;
+    margin-top: 40px;
+    color: #333;
 }
 
-.contenedor__item-botones button{
+
+
+/* formulario */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.formualario__item {
     width: 80%;
-    border: 1px solid var(--bordes-item);
+    margin: 3px auto;
+    height: 30px;
+    border: 1px solid #343434;
+}
+
+.formualario__item:hover, .formualario__item:focus{
+    box-shadow: 0 0 5px 2px #1c94af;
+    border: 1px solid #1c94af;
+    outline: none;
+}
+
+.formulario__total-a-pagar{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+
+.formualario__item-pagar{
+    width: 70px;
+    cursor: pointer;
+}
+
+.formualario__item-pagar:hover{
     background: var(--color-fondo-nav);
     color: #fff;
-}
-
-.contenedor__item-botones button:hover{
-    cursor: pointer;
-    background: var(--color-fondo-nav);
-    color: #000;
-}
-
-.contenedor__item-botones button:active{
-    background: #fff;
-    color: #000;
 }
 
 
@@ -176,11 +154,16 @@ aside {
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-
 }
 
 .carro__secciones-items-imagen {
     height: 70%;
+}
+
+.carro__secciones-items-imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .botonesSumarRestar {
@@ -238,6 +221,8 @@ aside {
 
 
 
+
+
 @media screen and (min-width: 388px){
     .contenedor{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -248,6 +233,16 @@ aside {
         height: 50%;
     }
 }
+
+@media screen and (min-width : 525px){
+    .titulo h2{
+        font-size: 40px;
+    }
+    .titulo p{
+        margin-top: 10px;
+    }
+}
+
 
 @media screen and (min-width: 708px) {
     .contenedor {
